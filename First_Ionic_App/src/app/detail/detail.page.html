@@ -1,0 +1,51 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>King Of The Pirates</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-item>
+      <ion-list style="cursor: pointer;" (click)="navigateAnime()">
+        Animes
+      </ion-list>
+    </ion-item>
+    <ion-item>
+      <ion-list style="cursor: pointer;" (click)="navigate()">
+        Trending Anime
+      </ion-list>
+    </ion-item>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>{{animeName}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+        <img *ngIf="coverImg != null" class="img-fluid" src="{{coverImg}}" alt="">
+        <div class="row">
+          <div class="col col-sm-2 col-lg-1 pt-2">
+          <img class="img-fluid" class="poster_img" src="{{posterImg}}">
+          </div>
+          <div class="col-9">
+            <span class="title">{{animeTitle}}</span> <br>
+            <span>Started Data : </span><span>{{startedDate}}</span> <br>
+            <span>Status : </span><span>{{animeStatus}}</span> <br>
+            <span>Age Rating : </span><span>{{animeageRating}}</span> <br>
+            <span>Rating : </span><span>{{animeRating}}</span> <br>
+            <span>End : </span><span>{{animeEnd}}</span>
+          </div>
+          <div class="row">
+            <div class="col-12 mt-3">
+              <span>{{animeDescription}}</span>
+            </div>
+          </div>
+        </div>
+  </ion-content>
+</div>
+

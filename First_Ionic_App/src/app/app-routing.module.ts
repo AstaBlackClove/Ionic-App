@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'detail',
+    loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
+  },
+  {
+    path: 'trending-anime',
+    loadChildren: () => import('./trending-anime/trending-anime.module').then( m => m.TrendingAnimePageModule)
+  },
 ];
 
 @NgModule({

@@ -7,7 +7,7 @@
   <ion-content>
     <ion-item>
       <ion-list style="cursor: pointer;" (click)="navigate()">
-        Trending Anime
+        Anime
       </ion-list>
     </ion-item>
   </ion-content>
@@ -18,11 +18,11 @@
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>Animes</ion-title>
+      <ion-title>Trending Animes</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <ion-item (click)="Detail(data.id)" style="cursor: pointer;" *ngFor="let data of Animes" detail="true">
+    <ion-item (click)="Detail(data.id)" style="cursor: pointer;" *ngFor="let data of trending" detail="true">
       <ion-avatar slot="start">
         <img src="{{data.attributes.posterImage.tiny}}" alt="">
       </ion-avatar>
